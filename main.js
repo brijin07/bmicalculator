@@ -4,8 +4,9 @@ function calculateBMI() {
     var weight = parseFloat(document.getElementById("weight").value);
     var height = parseFloat(document.getElementById("height").value);
     var gender = document.querySelector('input[name="gender"]:checked').value;
+    var age = parseInt(document.getElementById("age").value);
 
-    if (isNaN(weight) || isNaN(height)) {
+    if (isNaN(weight) || isNaN(height) || isNaN(age)) {
         document.getElementById("result").innerHTML = "Please enter valid values.";
         return;
     }
@@ -40,11 +41,10 @@ function calculateBMI() {
     }
 
     document.getElementById("result").innerHTML = "Your BMI is: " + bmi.toFixed(2) + "<br>Category: " + bmiCategory;
-    // document.getElementById("result").style.color="green"
 }
 
 // reset button
-
+const resetAge = document.getElementById('age');
 const nameInput = document.getElementById('weight');
 const emailInput = document.getElementById('height');
 const resultInput = document.getElementById('result');
@@ -55,4 +55,5 @@ resetButton.addEventListener('click', function() {
     nameInput.value = '';
     emailInput.value = '';
     resultInput.innerHTML= ' ';
+    resetAge.value=" " 
 });
