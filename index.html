@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+       <div id="content">
+            <h1>BMI Calculator</h1>
+              <p>Weight (kg): <input type="text" id="weight"></p>
+              <p>Height (m): <input type="text" id="height"></p>
+              <p style="margin-right: 20px;">Gender:
+                <input style="margin-left: 30px; color: black;" type="radio" name="gender" value="male" checked> Male
+                <input style="margin-left: 30px;" type="radio" name="gender" value="female"> Female
+              </p>
+        
+          <div class="btn-div">
+              <button onclick="calculateBMI()" class="btn">Calculate BMI</button>
+              <button class="btn1" id="resetButton">Reset</button>
+          </div>
+            <p id="result" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></p>
+       </div>
+  </div>
+    
+</body>
+<script src="./main.js"></script>
+</html>
